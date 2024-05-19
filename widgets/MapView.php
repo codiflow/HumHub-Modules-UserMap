@@ -105,7 +105,7 @@ class MapView extends Widget {
             return call_user_func($module->getFormatedAddressCallback, $user);
         }
 
-        if (empty($user->profile->zip) || empty($user->profile->city)) {
+        if (empty($user->profile->zip) && empty($user->profile->city)) {
             return null;
         }
 
